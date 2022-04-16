@@ -10,7 +10,7 @@ const App = () => {
       <img src={logo} alt="" className="navbar" />
       <Repo className="navbar" />
       <div className="container">Hello, World!</div>
-      <div>Test action</div>
+      <div>Test action12</div>
     </div>
   );
 };
