@@ -1,0 +1,41 @@
+@import "/src/styles/variables";
+
+section {
+  height: 100vh;
+  width: 100%;
+
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contatiner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wraper {
+    display: flex;
+    column-gap: 19px;
+  }
+
+  .icon {
+    fill: $dark_gray_2;
+    width: 16px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    color: $dark_gray_2;
+
+    &:hover {
+      color: $blue_1;
+
+      .icon {
+        fill: $blue_1;
+      }
+    }
+  }
+}

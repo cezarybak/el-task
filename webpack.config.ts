@@ -27,6 +27,7 @@ const config: Configuration = {
       logging: "warn",
       reconnect: true,
     },
+    historyApiFallback: true,
     open: true,
   },
   module: {
