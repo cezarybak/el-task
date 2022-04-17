@@ -1,9 +1,4 @@
-import {
-  ApolloClient,
-  createHttpLink,
-  HttpLink,
-  InMemoryCache,
-} from "@apollo/client";
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 const token = process.env.GIT_TOKEN;

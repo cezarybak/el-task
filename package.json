@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "webpack serve --mode development --config webpack.config.ts",
-    "build": "webpack --mode production",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
@@ -24,12 +23,6 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@babel/runtime": "^7.17.9",
-    "@graphql-codegen/add": "^3.1.1",
-    "@graphql-codegen/cli": "2.6.2",
-    "@graphql-codegen/introspection": "2.1.1",
-    "@graphql-codegen/typescript": "2.4.8",
-    "@graphql-codegen/typescript-operations": "2.3.5",
-    "@graphql-codegen/typescript-react-apollo": "3.2.11",
     "@svgr/webpack": "^6.2.1",
     "@types/dotenv-webpack": "^7.0.3",
     "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
