@@ -1,0 +1,24 @@
+query SearchMostTop10Star($queryString: String!) {
+  search(query: $queryString, type: USER, first: 10) {
+    repositoryCount
+    edges {
+      node {
+        ... on User {
+          id
+          login
+          name
+          avatarUrl
+          followers {
+            totalCount
+          }
+          following {
+            totalCount
+          }
+          starredRepositories {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+}

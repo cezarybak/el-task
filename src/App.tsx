@@ -1,17 +1,14 @@
 import "./App.scss";
-import Navbar from "./components/Navbar";
-import logo from "./assets/logo.png";
-import Repo from "./assets/repo.svg";
+import { Route, Routes } from "react-router-dom";
+import User from "./pages/User";
+import List from "./pages/List";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <img src={logo} alt="" className="navbar" />
-      <Repo className="navbar" />
-      <div className="container">Hello, World!</div>
-      <div>Test action12</div>
-    </div>
+    <Routes>
+      <Route path="/" element={<List />>} />
+      <Route path="/user/:id" element={<User />} />
+    </Routes>
   );
 };
 

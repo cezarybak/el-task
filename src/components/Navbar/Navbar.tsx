@@ -1,5 +1,7 @@
 import { Suspense, useEffect, useState } from "react";
+import { useSearchMostTop10StarQuery } from "../../graphql/generated";
 import useDebounce from "../../hooks/useDebounce";
+import logo from "./../../assets/logo.png";
 
 export const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -7,6 +9,8 @@ export const Navbar = () => {
   const [error, setError] = useState("");
 
   const debounceSearchTerm = useDebounce(search, 500);
+
+  const data = useSearchMostTop10StarQuery({});
 
   useEffect(() => {
     if (debounceSearchTerm) {
@@ -29,18 +33,13 @@ export const Navbar = () => {
   }, [debounceSearchTerm]);
 
   return (
-    <div>
-      <Suspense fallback={<p>Loading user bookings...</p>}>
-        {data?.map((e) => (
-          <div key={e?.id || ""}>{e.starred_url.length}</div>
-        ))}
-      </Suspense>
-      {error}
+    <header>
+      <img src={logo} alt="logo" />
       <input
         type="text"
         onChange={(e) => setSearch(e.target.value)}
         placeholder="asasdsad"
       />
-    </div>
+    </header>
   );
 };
