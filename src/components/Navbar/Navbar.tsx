@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const debounceSearchTerm = useDebounce(search, 500);
 
-  const data = useSearchMostTop10StarQuery({});
+  // const data = useSearchMostTop10StarQuery({});i
 
   useEffect(() => {
     if (debounceSearchTerm) {

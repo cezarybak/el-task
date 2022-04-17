@@ -1,14 +1,20 @@
 import "./App.scss";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import User from "./pages/User";
-import List from "./pages/List";
+import Home from "./pages/Home";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./graphql/apollo-client";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<List />>} />
-      <Route path="/user/:id" element={<User />} />
-    </Routes>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user/:id" element={<User />} />
+        </Routes>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 };
 
