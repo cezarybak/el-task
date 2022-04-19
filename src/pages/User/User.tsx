@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 import SEO from "../../components/SEO";
 import { useQuery } from "@apollo/client";
 import { SearchUser } from "../../graphql/operations/queries";
+import { SearchUserData, SearchUserVars } from "../../types/SearchUser";
 
 import "./style.scss";
-import { SearchUserData, SearchUserVars } from "../../types/SearchUser";
 
 export const User = () => {
   const { id } = useParams();

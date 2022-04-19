@@ -32,6 +32,13 @@ export type NodeType = {
     name: string;
     color: string;
   };
+  licenseInfo?: {
+    id?: string;
+    key?: string;
+  };
+  issues?: {
+    totalCount?: number;
+  };
   description?: string;
   updatedAt?: string;
   stargazerCount?: number;

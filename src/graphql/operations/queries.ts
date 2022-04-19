@@ -28,6 +28,13 @@ export const SearchList = gql`
           ... on Repository {
             name
             id
+            licenseInfo {
+              id
+              key
+            }
+            issues {
+              totalCount
+            }
             __typename
             primaryLanguage {
               id
