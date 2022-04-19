@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
+import SEO from "../../components/SEO";
 import { SearchList } from "../../graphql/operations/queries";
 import { SearchListData, SearchListVars } from "../../types/SearchList";
 
@@ -19,6 +20,7 @@ export const Home = () => {
 
   return (
     <section>
+      <SEO title="GitPage - Home" metaContent="GitHome Page Content Data" />
       <Navbar />
       <main className="home__container">
         <div className="home__wraper">

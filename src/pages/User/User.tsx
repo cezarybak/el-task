@@ -3,11 +3,17 @@ import StarIcon from "./../../assets/svg/star.svg";
 import PersonsIcon from "./../../assets/svg/person.svg";
 
 import "./style.scss";
+import { useParams } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 export const User = () => {
+  const { slug } = useParams();
+
   return (
     <section>
       <Navbar />
+      <SEO title={`${slug} - User`} metaContent="GitHome User Content Data" />
+
       <main className="user_container">
         <img src="" alt="" />
 

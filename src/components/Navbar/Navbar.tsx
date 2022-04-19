@@ -8,7 +8,7 @@ import "./style.scss";
 
 export const Navbar = () => {
   const navigator = useNavigate();
-  const { setSearch } = useDataContext();
+  const { setSearch, search } = useDataContext();
 
   return (
     <header>
@@ -23,6 +23,7 @@ export const Navbar = () => {
           className=""
           maxLength={20}
           type="text"
+          value={search}
           onChange={(e) => setSearch!(e.target.value!)}
           placeholder="Search"
         />
