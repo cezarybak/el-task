@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import SEO from "../../components/SEO";
-import useDataContext from "../../utils/hooks/useDataContext";
+import useSearchContext from "../../utils/hooks/useSearchContext";
+import { getData } from "../../utils/services/getData";
 
 import "./style.scss";
 
 export const Home = () => {
-  const { items, count, loading } = useDataContext();
   const navigate = useNavigate();
+
+  const { loading, count, items } = getData();
 
   return (
     <section>

@@ -43,3 +43,23 @@ export const SearchList = gql`
     }
   }
 `;
+
+export const SearchUser = gql`
+  query SearchUser($login: String!) {
+    user(login: $login) {
+      avatarUrl
+      login
+      name
+      location
+      followers {
+        totalCount
+      }
+      following {
+        totalCount
+      }
+      starredRepositories {
+        totalCount
+      }
+    }
+  }
+`;

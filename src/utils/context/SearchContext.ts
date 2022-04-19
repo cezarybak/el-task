@@ -8,16 +8,12 @@ export type DataType = {
 
 type SearchContextType = {
   setSearch?: Dispatch<SetStateAction<string>>;
-  loading: boolean;
-  count?: DataType["count"];
-  items?: DataType["items"];
+  search: string;
 };
 
 const SearchContext = createContext<SearchContextType>({
   setSearch: undefined,
-  loading: false,
-  count: 0,
-  items: [],
+  search: "",
 });
 
 export default SearchContext;

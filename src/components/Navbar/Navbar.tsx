@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useDataContext from "../../utils/hooks/useDataContext";
+import useSearchContext from "../../utils/hooks/useSearchContext";
 import logo from "./../../assets/logo.png";
 
 import "./style.scss";
 
 export const Navbar = () => {
   const navigator = useNavigate();
-  const { setSearch } = useDataContext();
+  const { setSearch } = useSearchContext();
 
   return (
     <header>
