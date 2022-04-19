@@ -1,17 +1,24 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import User from "./pages/User";
+import Home from "./pages/Home";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./graphql/apollo-client";
+import SearchDataProvider from "./utils/context/SearchProvider";
+
 import "./App.scss";
-import Navbar from "./components/Navbar";
-import logo from "./assets/logo.png";
-import Repo from "./assets/repo.svg";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <img src={logo} alt="" className="navbar" />
-      <Repo className="navbar" />
-      <div className="container">Hello, World!</div>
-      <div>Test action12</div>
-    </div>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <SearchDataProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/user/:id" element={<User />} />
+          </Routes>
+        </SearchDataProvider>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 };
 

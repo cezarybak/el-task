@@ -1,0 +1,60 @@
+@import "/src/styles/variables";
+
+section {
+  height: 100vh;
+  width: 100%;
+
+  .user_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user__section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user__wraper {
+    display: flex;
+    column-gap: 19px;
+  }
+
+  .user__icon {
+    fill: $dark_gray_2;
+    width: 16px;
+  }
+
+  .user__span {
+    display: flex;
+    align-items: center;
+    color: $dark_gray_2;
+
+    &:hover {
+      color: $blue_1;
+
+      .icon {
+        fill: $blue_1;
+      }
+    }
+  }
+
+  .home_loader {
+    margin: auto;
+    border: 8px solid $light_gray_1;
+    border-top: 8px solid $light_gray_3;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import ESlintWebpackPlugin from "eslint-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import { Configuration as WebpackConfiguration, ProvidePlugin } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+import Dotenv from "dotenv-webpack";
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
@@ -26,6 +27,7 @@ const config: Configuration = {
       logging: "warn",
       reconnect: true,
     },
+    historyApiFallback: true,
     open: true,
   },
   module: {
@@ -67,6 +69,7 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    new Dotenv(),
 
     new MiniCssExtractPlugin(),
 
