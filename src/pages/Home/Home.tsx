@@ -1,22 +1,13 @@
-import { useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import SEO from "../../components/SEO";
-import { SearchList } from "../../graphql/operations/queries";
-import { SearchListData, SearchListVars } from "../../types/SearchList";
+import useDataContext from "../../utils/hooks/useDataContext";
 
 import "./style.scss";
 
 export const Home = () => {
-  // const navigate = useNavigate();
-  // const { data, loading } = useQuery<SearchListData, SearchListVars>(
-  //   SearchList,
-  //   {
-  //     variables: { queryString: "as", first: 50, type: "USER" },
-  //   }
-  // );
-
-  // const count = Intl.NumberFormat().format(data?.search.userCount || 0);
+  const { items, count, loading } = useDataContext();
+  const navigate = useNavigate();
 
   return (
     <section>
@@ -24,28 +15,31 @@ export const Home = () => {
       <Navbar />
       <main className="home__container">
         <div className="home__wraper">
-          {/* {loading ? (
+          {loading ? (
             <div className="home_loader" />
           ) : (
             <div>
               <span>{count} results</span>
-              {data?.search.edges.map(({ node }) => (
+              {items?.map(({ node }) => (
                 <div
                   className="home_element"
-                  onClick={() => navigate(`/user/${node.login}`)}
+                  onClick={() =>
+                    node.__typename === "User" &&
+                    navigate(`/user/${node.login}`)
+                  }
                   key={node.id}
                 >
-                  {node.login}
+                  {node.__typename}
                 </div>
               ))}
             </div>
-          )} */}
+          )}
+        </div>
+        <div className="home_pagination">
+          <div className="home__paggination_button_disabled">Previous</div>
+          <div>Next</div>
         </div>
       </main>
-      <div className="home_pagination">
-        <div className="home__paggination_button_disabled">Previous</div>
-        <div>Next</div>
-      </div>
     </section>
   );
 };

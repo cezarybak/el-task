@@ -1,15 +1,23 @@
 import { createContext, Dispatch, SetStateAction } from "react";
+import { NodeType } from "../../types/SearchList";
+
+export type DataType = {
+  count: number;
+  items: { node: NodeType }[] | [];
+};
 
 type SearchContextType = {
-  search: string;
   setSearch?: Dispatch<SetStateAction<string>>;
   loading: boolean;
+  count?: DataType["count"];
+  items?: DataType["items"];
 };
 
 const SearchContext = createContext<SearchContextType>({
-  search: "",
   setSearch: undefined,
   loading: false,
+  count: 0,
+  items: [],
 });
 
 export default SearchContext;
