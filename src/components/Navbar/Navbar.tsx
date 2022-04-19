@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useDebounce from "../../hooks/useDebounce";
+import useDataContext from "../../utils/hooks/useDataContext";
+import useDebounce from "../../utils/hooks/useDebounce";
 import logo from "./../../assets/logo.png";
 
 import "./style.scss";
 
 export const Navbar = () => {
   const navigator = useNavigate();
-  const [search, setSearch] = useState("");
+  const { setSearch } = useDataContext();
 
   return (
     <header>
@@ -22,7 +23,7 @@ export const Navbar = () => {
           className=""
           maxLength={20}
           type="text"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setSearch!(e.target.value!)}
           placeholder="Search"
         />
       </div>

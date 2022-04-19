@@ -7,22 +7,22 @@ import { SearchListData, SearchListVars } from "../../types/SearchList";
 import "./style.scss";
 
 export const Home = () => {
-  const navigate = useNavigate();
-  const { data, loading } = useQuery<SearchListData, SearchListVars>(
-    SearchList,
-    {
-      variables: { queryString: "as", first: 50, type: "USER" },
-    }
-  );
+  // const navigate = useNavigate();
+  // const { data, loading } = useQuery<SearchListData, SearchListVars>(
+  //   SearchList,
+  //   {
+  //     variables: { queryString: "as", first: 50, type: "USER" },
+  //   }
+  // );
 
-  const count = Intl.NumberFormat().format(data?.search.userCount || 0);
+  // const count = Intl.NumberFormat().format(data?.search.userCount || 0);
 
   return (
     <section>
       <Navbar />
       <main className="home__container">
         <div className="home__wraper">
-          {loading ? (
+          {/* {loading ? (
             <div className="home_loader" />
           ) : (
             <div>
@@ -37,7 +37,7 @@ export const Home = () => {
                 </div>
               ))}
             </div>
-          )}
+          )} */}
         </div>
       </main>
       <div className="home_pagination">
