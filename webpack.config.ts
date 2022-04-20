@@ -68,7 +68,11 @@ const config: Configuration = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+      favicon: "./public/favicon.png",
+      baseUrl: process.env.NODE_ENV === "development" ? "/" : "/app/",
+    }),
     new Dotenv(),
 
     new MiniCssExtractPlugin(),
