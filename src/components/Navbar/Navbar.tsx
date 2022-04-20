@@ -9,17 +9,19 @@ export const Navbar = () => {
   const { setSearch, search } = useSearchContext();
 
   return (
-    <header>
-      <div>
+    <header className="navbar">
+      <div className="navbar__container">
         <img
-          className=""
+          className="navbar__container__image"
           src={logo}
+          height={38}
+          width={38}
           alt="logo"
           onClick={() => navigator("/")}
         />
         <input
-          className=""
-          maxLength={20}
+          className="navbar__container__input"
+          maxLength={25}
           type="text"
           value={search}
           onChange={(e) => setSearch!(e.target.value!)}

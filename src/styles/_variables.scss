@@ -11,3 +11,24 @@ $blue_1: #166cd7;
 // breakpoints
 $tablet: 768px;
 $mobile: 576px;
+
+.loader {
+  position: fixed;
+  top: calc(50vh - (58px / 2));
+  left: calc(50vw - (58px / 2));
+  border: 8px solid $light_gray_1;
+  border-top: 8px solid $light_gray_3;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  animation: spin 2s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

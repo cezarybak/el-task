@@ -1,59 +1,72 @@
 @import "/src/styles/variables";
 
-section {
-  height: 100vh;
+.user {
+  height: 100ch;
   width: 100%;
 
-  .user_container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .user__section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .user__wraper {
-    display: flex;
-    column-gap: 19px;
-  }
-
-  .user__icon {
-    fill: $dark_gray_2;
-    width: 16px;
-  }
-
-  .user__span {
+  &__container {
     display: flex;
     align-items: center;
-    color: $dark_gray_2;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 16px;
+    margin-top: 45px;
 
-    &:hover {
-      color: $blue_1;
-
-      .icon {
-        fill: $blue_1;
-      }
+    &__image {
+      width: 296px;
+      height: 296px;
+      border-radius: 50%;
     }
   }
 
-  .home_loader {
-    margin: auto;
-    border: 8px solid $light_gray_1;
-    border-top: 8px solid $light_gray_3;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 2s linear infinite;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
+    &__name {
+      margin: 0px;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 32px;
+      color: $darkest_gray;
+    }
+
+    &__login {
+      margin: 0px;
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 500;
+      color: $dark_gray_2;
+    }
+
+    &__info {
+      margin-top: 13px;
+      display: flex;
+      align-items: center;
+      column-gap: 19px;
+
+      &__span {
+        display: flex;
+        column-gap: 4px;
+        color: $dark_gray_2;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+
+        .user__icon {
+          width: 16px;
+          height: 16px;
+          fill: $dark_gray_2;
+        }
+
+        &:hover {
+          color: $blue_1;
+
+          .user__icon {
+            fill: $blue_1;
+          }
+        }
       }
     }
   }

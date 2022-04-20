@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
+import Pagination from "../../components/Pagination";
 import SEO from "../../components/SEO";
 import { getData } from "../../utils/services/getData";
 
@@ -10,19 +11,22 @@ export const Home = () => {
   const { loading, count, items } = getData();
 
   return (
-    <section>
+    <section className="home">
       <SEO title="Home - List" metaContent="GitHome Page Content Data" />
       <Navbar />
+
       <main className="home__container">
-        <div className="home__wraper">
+        <div className="home__container__wraper">
           {loading ? (
-            <div className="home_loader" />
+            <div className="loader" />
           ) : (
-            <div>
-              <span>{count} results</span>
+            <div className="home__container__wraper__list">
+              <span className="home__container__wraper__list__result">
+                {count} results
+              </span>
               {items?.map(({ node }) => (
                 <div
-                  className="home_element"
+                  className="home__container__wraper__list__element"
                   onClick={() =>
                     node.__typename === "User" &&
                     navigate(`/user/${node.login}`)
@@ -32,12 +36,12 @@ export const Home = () => {
                   {node.__typename}
                 </div>
               ))}
+
+              <div className="home__container__wraper__list__pagination">
+                <Pagination />
+              </div>
             </div>
           )}
-        </div>
-        <div className="home_pagination">
-          <div className="home__paggination_button_disabled">Previous</div>
-          <div>Next</div>
         </div>
       </main>
     </section>

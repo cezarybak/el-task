@@ -20,36 +20,45 @@ export const User = () => {
   );
 
   return (
-    <section>
+    <section className={`user`}>
       <Navbar />
       <SEO
         title={`User - ${data?.user.name || data?.user.login}`}
         metaContent="GitHome User Content Data"
       />
 
-      <main className="user_container">
-        <img src={data?.user.avatarUrl} alt={`${id}-user-avatart`} />
-        <div className="user__section">
-          <div>
-            <h1>{data?.user.name}</h1>
-            <h3>{data?.user.login}</h3>
-          </div>
+      <main className="user__container">
+        {loading ? (
+          <div className="loader"></div>
+        ) : (
+          <>
+            <img
+              className="user__container__image"
+              src={data?.user.avatarUrl}
+              alt={`${id}-user-avatart`}
+            />
+            <div className="user__section">
+              <h2 className="user__section__name">{data?.user.name}</h2>
+              <h3 className="user__section__login">{data?.user.login}</h3>
 
-          <div className="user__wraper">
-            <span className="user__span">
-              {data?.user.followers.totalCount}
-              <PersonsIcon className="user__icon" />
-            </span>
-            <span className="user__span">
-              {data?.user.following.totalCount}
-              Following
-            </span>
-            <span className="user__span">
-              <StarIcon className="user__icon" />
-              {data?.user.starredRepositories.totalCount} Star
-            </span>
-          </div>
-        </div>
+              <div className="user__section__info">
+                <span className="user__section__info__span">
+                  {data?.user.followers.totalCount}
+                  <PersonsIcon className="user__icon" /> Followers
+                </span>
+
+                <span className="user__section__info__span">
+                  {data?.user.following.totalCount} Following
+                </span>
+
+                <span className="user__section__info__span">
+                  <StarIcon className="user__icon" />
+                  {data?.user.starredRepositories.totalCount} Star
+                </span>
+              </div>
+            </div>
+          </>
+        )}
       </main>
     </section>
   );
