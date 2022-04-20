@@ -1,0 +1,55 @@
+@import "/src/styles/variables";
+
+.pagination {
+  display: flex;
+  column-gap: 48px;
+
+  &__element {
+    display: flex;
+    column-gap: 9px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 12px;
+    color: $blue_1;
+    cursor: pointer;
+    outline: inherit;
+    background: none;
+    border: none;
+
+    &__icon {
+      fill: $blue_1;
+      width: 9px;
+      height: 9px;
+
+      &__right {
+        fill: $blue_1;
+        transform: rotate(180deg);
+        width: 9px;
+        height: 9px;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: $dark_gray_1;
+
+      .pagination__element__icon {
+        fill: $dark_gray_1;
+      }
+
+      .pagination__element__icon__right {
+        fill: $dark_gray_1;
+      }
+
+      :hover {
+        outline: invert;
+      }
+    }
+
+    &:hover:enabled {
+      outline: 1px solid $light_gray_3;
+      border-radius: 5px;
+    }
+  }
+}
