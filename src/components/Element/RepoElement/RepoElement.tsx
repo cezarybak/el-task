@@ -1,4 +1,4 @@
-import { NodeType } from "../../types/SearchList";
+import { NodeType } from "../../../types/SearchList";
 
 type Props = {
   items: NodeType;

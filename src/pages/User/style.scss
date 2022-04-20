@@ -1,6 +1,6 @@
 @import "/src/styles/variables";
 
-.user {
+.userPage {
   height: 100ch;
   width: 100%;
 
@@ -53,7 +53,7 @@
         line-height: 16px;
         font-weight: 500;
 
-        .user__icon {
+        .userPage__icon {
           width: 16px;
           height: 16px;
           fill: $dark_gray_2;
@@ -62,7 +62,7 @@
         &:hover {
           color: $blue_1;
 
-          .user__icon {
+          .userPage__icon {
             fill: $blue_1;
           }
         }

@@ -24,9 +24,11 @@ export type NodeType = {
   following?: {
     totalCount: string;
   };
+  bio?: string;
   starredRepositories?: {
     totalCount: string;
   };
+  location?: string;
   primaryLanguage?: {
     id: string;
     name: string;

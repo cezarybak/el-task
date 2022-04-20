@@ -1,2 +1,2 @@
-export { RepoElement } from "./RepoElement";
-export { UserElement } from "./UserElement";
+export { RepoElement } from "./RepoElement/RepoElement";
+export { UserElement } from "./UserElement/UserElement";

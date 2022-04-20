@@ -1,0 +1,64 @@
+@import "/src/styles/variables";
+
+.userElement {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  column-gap: 8px;
+
+  &__image {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__name_wraper {
+      &__navigation {
+        color: $blue_1;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0px;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $blue_1;
+        }
+      }
+
+      &__login {
+        margin: 0px;
+        font-weight: 500;
+        line-height: 24px;
+        font-size: 16px;
+        color: $dark_gray_2;
+      }
+    }
+
+    &__other_wraper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      &__bio {
+        margin: 0px;
+        font-size: 14px;
+        line-height: 18px;
+        color: $darkest_gray;
+      }
+
+      &__location {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+        color: $dark_gray_2;
+      }
+    }
+  }
+}

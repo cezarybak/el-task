@@ -20,39 +20,39 @@ export const User = () => {
   );
 
   return (
-    <section className={`user`}>
+    <section className="userPage">
       <Navbar />
       <SEO
         title={`User - ${data?.user.name || data?.user.login}`}
         metaContent="GitHome User Content Data"
       />
 
-      <main className="user__container">
+      <main className="userPage__container">
         {loading ? (
-          <div className="loader"></div>
+          <div className="loader" />
         ) : (
           <>
             <img
-              className="user__container__image"
+              className="userPage__container__image"
               src={data?.user.avatarUrl}
               alt={`${id}-user-avatart`}
             />
-            <div className="user__section">
-              <h2 className="user__section__name">{data?.user.name}</h2>
-              <h3 className="user__section__login">{data?.user.login}</h3>
+            <div className="userPage__section">
+              <h2 className="userPage__section__name">{data?.user.name}</h2>
+              <h3 className="userPage__section__login">{data?.user.login}</h3>
 
-              <div className="user__section__info">
-                <span className="user__section__info__span">
+              <div className="userPage__section__info">
+                <span className="userPage__section__info__span">
                   {data?.user.followers.totalCount}
-                  <PersonsIcon className="user__icon" /> Followers
+                  <PersonsIcon className="userPage__icon" /> Followers
                 </span>
 
-                <span className="user__section__info__span">
+                <span className="userPage__section__info__span">
                   {data?.user.following.totalCount} Following
                 </span>
 
-                <span className="user__section__info__span">
-                  <StarIcon className="user__icon" />
+                <span className="userPage__section__info__span">
+                  <StarIcon className="userPage__icon" />
                   {data?.user.starredRepositories.totalCount} Star
                 </span>
               </div>

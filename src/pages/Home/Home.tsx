@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { RepoElement, UserElement } from "../../components/Element";
 import Navbar from "../../components/Navbar";
 import Pagination from "../../components/Pagination";
@@ -10,30 +9,25 @@ import "./style.scss";
 
 export const Home = () => {
   const [activePage, setActivePage] = useState(0);
-  const navigate = useNavigate();
   const { loading, count, items } = getData();
 
   return (
-    <section className="home">
+    <section className="homePage">
       <SEO title="Home - List" metaContent="GitHome Page Content Data" />
       <Navbar />
 
-      <main className="home__container">
-        <div className="home__container__wraper">
+      <main className="homePage__container">
+        <div className="homePage__container__wraper">
           {loading ? (
             <div className="loader" />
           ) : (
-            <div className="home__container__wraper__list">
-              <h1 className="home__container__wraper__list__result">
+            <div className="homePage__container__wraper__list">
+              <h1 className="homePage__container__wraper__list__result">
                 {count?.toLocaleString()} results
               </h1>
               {items?.map(({ node }) => (
                 <div
-                  className="home__container__wraper__list__element"
-                  onClick={() =>
-                    node.__typename === "User" &&
-                    navigate(`/user/${node.login}`)
-                  }
+                  className="homePage__container__wraper__list__element"
                   key={node.id}
                 >
                   {node.__typename === "Repository" ? (
@@ -44,7 +38,7 @@ export const Home = () => {
                 </div>
               ))}
 
-              <div className="home__container__wraper__list__pagination">
+              <div className="homePage__container__wraper__list__pagination">
                 <Pagination
                   activePage={activePage}
                   setActivePage={setActivePage}

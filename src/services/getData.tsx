@@ -16,7 +16,7 @@ export const getData = () => {
 
   const { search } = useSearchContext();
 
-  const debounceSearchTerm = useDebounce(search, 750);
+  const debounceSearchTerm = useDebounce(search, 600);
 
   useEffect(() => {
     (async () => {
