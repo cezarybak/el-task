@@ -18,13 +18,11 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: Create .env file
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
-
       - name: Build
         run: |
+          touch .env
+          echo GIT_TOKEN=${{ secrets.GIT_TOKEN }} >> .env
+          cat .env
           yarn autoclean
           yarn build
 
