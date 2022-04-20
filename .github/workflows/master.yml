@@ -21,7 +21,7 @@ jobs:
         run: yarn install
 
       - name: Build
-       env:
+        env:
           GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
           yarn autoclean
