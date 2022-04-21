@@ -13,8 +13,8 @@ const App = () => {
       <BrowserRouter>
         <SearchDataProvider>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="user/:id" element={<User />} />
+            <Route path="/*" element={<Home />} />
+            <Route path="/user/:id" element={<User />} />
           </Routes>
         </SearchDataProvider>
       </BrowserRouter>
