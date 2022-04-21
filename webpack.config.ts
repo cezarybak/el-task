@@ -72,11 +72,12 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon.png",
+      baseUrl: "/",
     }),
     new Dotenv(),
 
     new BaseHrefWebpackPlugin({
-      baseHref: process.env.NODE_ENV === "development" ? "/" : "/el-task/",
+      baseHref: "/",
     }),
 
     new MiniCssExtractPlugin(),
