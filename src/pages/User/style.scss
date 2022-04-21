@@ -9,12 +9,12 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    row-gap: 16px;
+    row-gap: 1rem;
     margin-top: 45px;
 
     &__image {
-      width: 296px;
-      height: 296px;
+      width: 18.5rem;
+      height: 18.5rem;
       border-radius: 50%;
     }
   }
@@ -26,16 +26,16 @@
 
     &__name {
       margin: 0px;
-      font-size: 26px;
+      font-size: 1.625rem;
       font-weight: 500;
-      line-height: 32px;
+      line-height: 2rem;
       color: $darkest_gray;
     }
 
     &__login {
       margin: 0px;
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 1.25rem;
+      line-height: 2rem;
       font-weight: 500;
       color: $dark_gray_2;
     }
@@ -49,13 +49,13 @@
         display: flex;
         column-gap: 4px;
         color: $dark_gray_2;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.75rem;
+        line-height: 1rem;
         font-weight: 500;
 
         .userPage__icon {
-          width: 16px;
-          height: 16px;
+          width: 1rem;
+          height: 1rem;
           fill: $dark_gray_2;
         }
 

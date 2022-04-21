@@ -1,1 +1,78 @@
 @import "/src/styles/variables";
+
+.repoElement {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 0.656rem;
+
+  &__icon {
+    min-width: 1rem;
+    height: 1rem;
+    fill: $dark_gray_2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    &__content_wraper {
+      display: flex;
+      row-gap: 5px;
+      flex-direction: column;
+
+      &__name {
+        cursor: default;
+        text-decoration: none;
+        margin: 0rem;
+        color: $blue_1;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $blue_1;
+        }
+      }
+
+      &__description {
+        margin: 0px;
+        font-weight: 500;
+        font-size: 1rem;
+        height: 100%;
+        line-height: 1.5rem;
+        color: $dark_gray_2;
+      }
+    }
+
+    &__content_other {
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      list-style-type: none;
+      flex-wrap: wrap;
+
+      &__item {
+        color: $dark_gray_2;
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem;
+        column-gap: 3px;
+        line-height: 1rem;
+
+        &__icon {
+          fill: $dark_gray_2;
+          min-width: 0.875rem;
+          height: 0.875rem;
+        }
+      }
+    }
+  }
+
+  .circle {
+    width: 0.75rem;
+    height: 0.75rem;
+    position: relative;
+    border-radius: 50%;
+  }
+}

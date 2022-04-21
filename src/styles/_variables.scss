@@ -8,18 +8,17 @@ $light_gray_1: #f3f5f7;
 $light_gray_2: #c4c4c4;
 $blue_1: #166cd7;
 
-$tablet: 768px;
-$mobile: 576px;
+$mobile: 36rem;
 
 .loader {
   position: fixed;
-  top: calc(50vh - (58px / 2));
-  left: calc(50vw - (58px / 2));
-  border: 8px solid $light_gray_1;
-  border-top: 8px solid $light_gray_3;
+  top: calc(50vh - (3.625rem / 2));
+  left: calc(50vw - (3.625rem / 2));
+  border: 0.5rem solid $light_gray_1;
+  border-top: 0.5rem solid $light_gray_3;
   border-radius: 50%;
-  width: 58px;
-  height: 58px;
+  width: 3.625rem;
+  height: 3.625rem;
   animation: spin 2s linear infinite;
 
   @keyframes spin {

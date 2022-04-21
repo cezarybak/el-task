@@ -24,15 +24,15 @@
       padding: 6px 17px;
       color: $light_gray_3;
       font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
 
       &::placeholder {
         opacity: 100;
         color: $light_gray_3;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
 
       &:focus {

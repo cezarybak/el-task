@@ -21,14 +21,14 @@
       &__list {
         &__result {
           margin: 0px 0px 20px 0px;
-          font-size: 21px;
+          font-size: 1.313rem;
           font-weight: 500;
-          line-height: 32px;
+          line-height: 2rem;
           color: $black;
         }
 
         &__element {
-          padding: 20px 0px 16px 0px;
+          padding: 1.25rem 0rem 1rem 0rem;
           border-top: 1px solid $light_gray_2;
         }
 

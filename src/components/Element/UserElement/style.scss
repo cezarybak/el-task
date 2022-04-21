@@ -22,8 +22,9 @@
         color: $blue_1;
         text-decoration: none;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
         margin: 0px;
 
         &:hover {
@@ -35,8 +36,8 @@
       &__login {
         margin: 0px;
         font-weight: 500;
-        line-height: 24px;
-        font-size: 16px;
+        line-height: 1.5rem;
+        font-size: 1rem;
         color: $dark_gray_2;
       }
     }
@@ -48,14 +49,14 @@
 
       &__bio {
         margin: 0px;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: $darkest_gray;
       }
 
       &__location {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.75rem;
+        line-height: 1rem;
         font-weight: 500;
         color: $dark_gray_2;
       }
