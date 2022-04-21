@@ -1,51 +1,50 @@
 @import "/src/styles/variables";
 
-header {
+.navbar {
   background-color: $darkest_gray;
   width: 100%;
 
-  div {
+  &__container {
     padding: 17px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  img {
-    cursor: pointer;
-  }
-
-  input {
-    height: 100%;
-    border-radius: 5px;
-    background-color: $darkest_gray;
-    border: 1px solid $light_gray_3;
-    padding: 6px 17px;
-    color: $light_gray_3;
-    font-family: Segoe UI;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-
-    &::placeholder {
-      opacity: 100;
-      color: $light_gray_3;
-      font-family: Segoe UI;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
+    &__image {
+      cursor: pointer;
+      width: 38px;
+      height: 38px;
     }
 
-    &:focus {
-      outline: none;
+    &__input {
+      border-radius: 5px;
+      width: 237px;
+      background-color: $darkest_gray;
+      border: 1px solid $light_gray_3;
+      padding: 6px 17px;
+      color: $light_gray_3;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      &::placeholder {
+        opacity: 100;
+        color: $light_gray_3;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
 
 @media screen and (max-width: $mobile) {
-  header {
-    div {
+  .navbar {
+    &__container {
       padding: 10px 20px;
     }
   }

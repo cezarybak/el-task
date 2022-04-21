@@ -12,6 +12,7 @@ export const SearchList = gql`
             avatarUrl
             id
             login
+            bio
             name
             location
             avatarUrl

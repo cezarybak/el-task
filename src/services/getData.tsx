@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import { client } from "../../graphql/apollo-client";
-import { SearchList } from "../../graphql/operations/queries";
-import {
-  NodeType,
-  SearchListData,
-  SearchListVars,
-} from "../../types/SearchList";
-import useSearchContext from "../hooks/useSearchContext";
+import { client } from "../graphql/apollo-client";
+import { SearchList } from "../graphql/operations/queries";
+import { NodeType, SearchListData, SearchListVars } from "../types/SearchList";
+import useDebounce from "../utils/hooks/useDebounce";
+import useSearchContext from "../utils/hooks/useSearchContext";
 
 export type DataType = {
   count: number;
@@ -19,6 +16,8 @@ export const getData = () => {
 
   const { search } = useSearchContext();
 
+  const debounceSearchTerm = useDebounce(search, 600);
+
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -26,7 +25,7 @@ export const getData = () => {
         await client.query<SearchListData, SearchListVars>({
           query: SearchList,
           variables: {
-            queryString: search || "KurA",
+            queryString: debounceSearchTerm || "KurA",
             first: 15,
             type: "USER",
           },
@@ -35,7 +34,7 @@ export const getData = () => {
         await client.query<SearchListData, SearchListVars>({
           query: SearchList,
           variables: {
-            queryString: search || "KurA",
+            queryString: debounceSearchTerm || "KurA",
             first: 15,
             type: "REPOSITORY",
           },
@@ -54,14 +53,14 @@ export const getData = () => {
                 count: prev.count + next.count,
                 items: prev.items
                   .concat(next.items)
-                  .sort((a, b) => a.node.id.localeCompare(b.node.id)),
+                  .sort((a, b) => a.node?.id?.localeCompare(b.node?.id)),
               };
             })
         );
         setLoading(false);
       });
     })();
-  }, [search]);
+  }, [debounceSearchTerm]);
 
   return {
     loading,

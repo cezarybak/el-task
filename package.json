@@ -5,11 +5,12 @@
   "description": "Task",
   "license": "MIT",
   "scripts": {
-    "start:dev": "webpack --env development serve --mode development --config webpack.config.ts",
+    "start:dev": "webpack  serve --mode development --config webpack.config.ts",
     "build": "webpack --env production --mode production"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
+    "dayjs": "^1.11.1",
     "graphql": "^16.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
