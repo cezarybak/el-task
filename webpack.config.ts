@@ -5,6 +5,7 @@ import ESlintWebpackPlugin from "eslint-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import { Configuration as WebpackConfiguration, ProvidePlugin } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+import { BaseHrefWebpackPlugin } from "base-href-webpack-plugin";
 import Dotenv from "dotenv-webpack";
 
 interface Configuration extends WebpackConfiguration {
@@ -71,10 +72,12 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon.png",
-      baseUrl: process.env.NODE_ENV === "development" ? "/" : "/app/",
-      baseHref: "/",
     }),
     new Dotenv(),
+
+    new BaseHrefWebpackPlugin({
+      baseHref: process.env.NODE_ENV === "development" ? "/" : "/el-task/",
+    }),
 
     new MiniCssExtractPlugin(),
 

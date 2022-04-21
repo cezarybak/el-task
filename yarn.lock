@@ -2020,6 +2020,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+base-href-webpack-plugin@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/base-href-webpack-plugin/-/base-href-webpack-plugin-3.0.1.tgz#9fb5d775835cc56fdadb2c1060f6200804977de8"
+  integrity sha512-1Z3mFTiK5mqm24cdcRDdP0/dQFOsAapoO/fh/d6WJNjJYJPHJ9Alr9tmSEZgc1KhyWxvMl5zY/eIqXZdE9PFMA==
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"

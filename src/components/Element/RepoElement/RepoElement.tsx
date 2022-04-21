@@ -44,13 +44,15 @@ export const RepoElement = ({ items }: Props) => {
             <StarIcon className="repoElement__container__content_other__item__icon" />
             {stargazerCount}
           </li>
-          <li className="repoElement__container__content_other__item">
-            <div
-              className="circle "
-              style={{ background: primaryLanguage?.color || "white" }}
-            />
-            {primaryLanguage?.name}
-          </li>
+          {!!primaryLanguage?.name && (
+            <li className="repoElement__container__content_other__item">
+              <div
+                className="circle "
+                style={{ background: primaryLanguage?.color || "white" }}
+              />
+              {primaryLanguage?.name}
+            </li>
+          )}
           {!!licenseInfo?.key && (
             <li className="repoElement__container__content_other__item">
               {licenseInfo?.key.toUpperCase()} license

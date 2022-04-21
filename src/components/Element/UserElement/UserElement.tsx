@@ -26,7 +26,7 @@ export const UserElement = ({ items }: Props) => {
             className="userElement__content__name_wraper__navigation"
             to={`/user/${login}`}
           >
-            {name}
+            {name || login}
           </Link>
           <h3 className="userElement__content__name_wraper__login">{login}</h3>
         </div>
