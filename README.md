@@ -18,5 +18,3 @@ GIT_TOKEN=*
 ```
 
 GIT_TOKEN -> https://github.com/settings/tokens -> Generate new token -> User and Repo access
-
-#### Deploy link: https://cezarybak.github.io/el-task/
