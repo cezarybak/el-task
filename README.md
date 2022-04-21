@@ -13,7 +13,7 @@ yarn build
 
 # Example .env:
 ```env
-GIT_TOKEN
+GIT_TOKEN=*
 ```
 
 #### Deploy link: https://cezarybak.github.io/el-task/
