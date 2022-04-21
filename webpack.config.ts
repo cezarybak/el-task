@@ -76,7 +76,7 @@ const config: Configuration = {
     new Dotenv(),
 
     new BaseHrefWebpackPlugin({
-      baseHref: process.env.NODE_ENV === "development" ? "/" : "/el-task/",
+      baseHref: process.env.NODE_ENV === "development" ? "/" : "/el-task",
     }),
 
     new MiniCssExtractPlugin(),
