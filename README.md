@@ -8,6 +8,7 @@ yarn start:dev
 # The production server:
 
 ```
+yarn
 yarn build 
 ```
 
