@@ -47,7 +47,7 @@ export const RepoElement = ({ items }: Props) => {
           {!!primaryLanguage?.name && (
             <li className="repoElement__container__content_other__item">
               <div
-                className="circle "
+                className="circle"
                 style={{ background: primaryLanguage?.color || "white" }}
               />
               {primaryLanguage?.name}

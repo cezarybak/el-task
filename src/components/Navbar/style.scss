@@ -23,16 +23,12 @@
       border: 1px solid $light_gray_3;
       padding: 6px 17px;
       color: $light_gray_3;
-      font-weight: 500;
-      font-size: 1rem;
-      line-height: 1.5rem;
+      @extend .text-style-16-semibold;
 
       &::placeholder {
         opacity: 100;
         color: $light_gray_3;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.5rem;
+        @extend .text-style-16-semibold;
       }
 
       &:focus {

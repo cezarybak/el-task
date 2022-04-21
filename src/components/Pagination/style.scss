@@ -8,14 +8,13 @@
     display: flex;
     column-gap: 9px;
     align-items: center;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
     padding: 8px 12px;
-    color: $blue_1;
     cursor: pointer;
     outline: inherit;
     background: none;
     border: none;
+    @extend .text-style-14-semibold;
+    color: $blue_1;
 
     &__icon {
       fill: $blue_1;

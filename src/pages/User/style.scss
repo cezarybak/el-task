@@ -26,18 +26,12 @@
 
     &__name {
       margin: 0px;
-      font-size: 1.625rem;
-      font-weight: 500;
-      line-height: 2rem;
-      color: $darkest_gray;
+      @extend .text-style-26-semibold;
     }
 
     &__login {
       margin: 0px;
-      font-size: 1.25rem;
-      line-height: 2rem;
-      font-weight: 500;
-      color: $dark_gray_2;
+      @extend .text-style-20-semibold;
     }
 
     &__info {
@@ -48,10 +42,7 @@
       &__span {
         display: flex;
         column-gap: 4px;
-        color: $dark_gray_2;
-        font-size: 0.75rem;
-        line-height: 1rem;
-        font-weight: 500;
+        @extend .text-style-12-semibold;
 
         .userPage__icon {
           width: 1rem;

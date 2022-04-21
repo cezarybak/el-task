@@ -22,25 +22,14 @@
 
       &__name {
         cursor: default;
-        text-decoration: none;
         margin: 0rem;
-        color: $blue_1;
-        font-size: 1rem;
-        line-height: 1rem;
         font-weight: 500;
-
-        &:hover {
-          text-decoration: underline;
-          text-decoration-color: $blue_1;
-        }
+        @extend .text-style-16-link;
       }
 
       &__description {
         margin: 0px;
-        font-weight: 500;
-        font-size: 1rem;
-        height: 100%;
-        line-height: 1.5rem;
+        @extend .text-style-16-semibold;
         color: $dark_gray_2;
       }
     }
@@ -53,12 +42,10 @@
       flex-wrap: wrap;
 
       &__item {
-        color: $dark_gray_2;
         display: flex;
         align-items: center;
-        font-size: 0.75rem;
         column-gap: 3px;
-        line-height: 1rem;
+        @extend .text-style-12-semibold;
 
         &__icon {
           fill: $dark_gray_2;

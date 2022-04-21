@@ -30,11 +30,10 @@ export const Home = () => {
                   className="homePage__container__wraper__list__element"
                   key={node.id}
                 >
-                  {node.__typename === "Repository" ? (
+                  {node.__typename === "Repository" && (
                     <RepoElement items={node} />
-                  ) : (
-                    <UserElement items={node} />
                   )}
+                  {node.__typename === "User" && <UserElement items={node} />}
                 </div>
               ))}
 

@@ -30,3 +30,56 @@ $mobile: 36rem;
     }
   }
 }
+
+.text-style-h1 {
+  font-size: 1.313rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: $black;
+}
+
+.text-style-26-semibold {
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: $darkest_gray;
+}
+
+.text-style-20-semibold {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: $dark_gray_2;
+}
+
+.text-style-16-link {
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: $blue_1;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $blue_1;
+  }
+}
+
+.text-style-16-semibold {
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.text-style-14-semibold {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+}
+
+.text-style-12-semibold {
+  color: $dark_gray_2;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}

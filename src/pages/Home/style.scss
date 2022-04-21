@@ -21,10 +21,7 @@
       &__list {
         &__result {
           margin: 0px 0px 20px 0px;
-          font-size: 1.313rem;
-          font-weight: 500;
-          line-height: 2rem;
-          color: $black;
+          @extend .text-style-h1;
         }
 
         &__element {

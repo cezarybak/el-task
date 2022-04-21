@@ -19,25 +19,14 @@
 
     &__name_wraper {
       &__navigation {
-        color: $blue_1;
-        text-decoration: none;
+        @extend .text-style-16-link;
         font-weight: 600;
-        font-size: 1rem;
-        line-height: 1.5rem;
-
         margin: 0px;
-
-        &:hover {
-          text-decoration: underline;
-          text-decoration-color: $blue_1;
-        }
       }
 
       &__login {
         margin: 0px;
-        font-weight: 500;
-        line-height: 1.5rem;
-        font-size: 1rem;
+        @extend .text-style-16-semibold;
         color: $dark_gray_2;
       }
     }
@@ -49,16 +38,12 @@
 
       &__bio {
         margin: 0px;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
+        @extend .text-style-14-semibold;
         color: $darkest_gray;
       }
 
       &__location {
-        font-size: 0.75rem;
-        line-height: 1rem;
-        font-weight: 500;
-        color: $dark_gray_2;
+        @extend .text-style-12-semibold;
       }
     }
   }
