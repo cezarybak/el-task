@@ -25,7 +25,7 @@ export const getData = () => {
         await client.query<SearchListData, SearchListVars>({
           query: SearchList,
           variables: {
-            queryString: debounceSearchTerm || "cezaryb",
+            queryString: debounceSearchTerm || "passion",
             first: 15,
             type: "USER",
           },
@@ -34,7 +34,7 @@ export const getData = () => {
         await client.query<SearchListData, SearchListVars>({
           query: SearchList,
           variables: {
-            queryString: debounceSearchTerm || "cezaryb",
+            queryString: debounceSearchTerm || "passion",
             first: 15,
             type: "REPOSITORY",
           },

@@ -31,10 +31,14 @@ export const UserElement = ({ items }: Props) => {
           <h3 className="userElement__content__name_wraper__login">{login}</h3>
         </div>
         <div className="userElement__content__other_wraper">
-          <h3 className="userElement__content__other_wraper__bio">{bio}</h3>
-          <span className="userElement__content__other_wraper__location">
-            {location}
-          </span>
+          {!!bio && (
+            <h3 className="userElement__content__other_wraper__bio">{bio}</h3>
+          )}
+          {!!location && (
+            <span className="userElement__content__other_wraper__location">
+              {location}
+            </span>
+          )}
         </div>
       </div>
     </div>
