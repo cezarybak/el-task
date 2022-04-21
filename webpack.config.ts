@@ -72,6 +72,7 @@ const config: Configuration = {
       template: "./public/index.html",
       favicon: "./public/favicon.png",
       baseUrl: process.env.NODE_ENV === "development" ? "/" : "/app/",
+      baseHref: "/",
     }),
     new Dotenv(),
 
