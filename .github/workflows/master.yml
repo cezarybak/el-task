@@ -22,7 +22,6 @@ jobs:
         run: |
           touch .env
           echo GIT_TOKEN=${{ secrets.GIT_TOKEN }} >> .env
-          cat .env
           yarn autoclean
           yarn build
 
