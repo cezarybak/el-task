@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { NodeType } from "../../../types/SearchList";
+import { User } from "../../../types/SearchList";
 
 import "./style.scss";
 
 type Props = {
-  items: NodeType;
+  items: User;
 };
 
 export const UserElement = ({ items }: Props) => {

@@ -3,13 +3,13 @@ import { RepoElement, UserElement } from "../../components/Element";
 import Navbar from "../../components/Navbar";
 import Pagination from "../../components/Pagination";
 import SEO from "../../components/SEO";
-import { getData } from "../../services/getData";
+import { getSearchedItems } from "../../services/getData";
 
 import "./style.scss";
 
 export const Home = () => {
   const [activePage, setActivePage] = useState(0);
-  const { loading, count, items } = getData();
+  const { loading, count, items } = getSearchedItems();
 
   return (
     <section className="homePage">

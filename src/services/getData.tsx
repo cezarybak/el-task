@@ -1,20 +1,26 @@
+import { useApolloClient } from "@apollo/client";
 import { useEffect, useState } from "react";
-import { client } from "../graphql/apollo-client";
 import { SearchList } from "../graphql/operations/queries";
-import { NodeType, SearchListData, SearchListVars } from "../types/SearchList";
+import {
+  Repo,
+  SearchListData,
+  SearchListVars,
+  User,
+} from "../types/SearchList";
 import useDebounce from "../utils/hooks/useDebounce";
 import useSearchContext from "../utils/hooks/useSearchContext";
 
 export type DataType = {
   count: number;
-  items: { node: NodeType }[] | [];
+  items: { node: User | Repo }[] | [];
 };
 
-export const getData = () => {
+export const getSearchedItems = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<undefined | DataType>(undefined);
 
   const { search } = useSearchContext();
+  const client = useApolloClient();
 
   const debounceSearchTerm = useDebounce(search, 600);
 

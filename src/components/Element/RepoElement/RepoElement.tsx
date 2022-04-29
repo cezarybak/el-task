@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NodeType } from "../../../types/SearchList";
+import { Repo } from "../../../types/SearchList";
 import parseDate from "../../../utils/helper/parseDate";
 import RepoIcon from "./../../../assets/svg/repo.svg";
 import StarIcon from "./../../../assets/svg/star.svg";
@@ -7,7 +7,7 @@ import StarIcon from "./../../../assets/svg/star.svg";
 import "./style.scss";
 
 type Props = {
-  items: NodeType;
+  items: Repo;
 };
 
 export const RepoElement = ({ items }: Props) => {
@@ -44,16 +44,16 @@ export const RepoElement = ({ items }: Props) => {
             <StarIcon className="repoElement__container__content_other__item__icon" />
             {stargazerCount}
           </li>
-          {!!primaryLanguage?.name && (
+          {!!primaryLanguage.name && (
             <li className="repoElement__container__content_other__item">
               <div
                 className="circle"
-                style={{ background: primaryLanguage?.color || "white" }}
+                style={{ background: primaryLanguage.color || "white" }}
               />
-              {primaryLanguage?.name}
+              {primaryLanguage.name}
             </li>
           )}
-          {!!licenseInfo?.key && (
+          {!!licenseInfo.key && (
             <li className="repoElement__container__content_other__item">
               {licenseInfo?.key.toUpperCase()} license
             </li>
@@ -61,9 +61,9 @@ export const RepoElement = ({ items }: Props) => {
           <li className="repoElement__container__content_other__item">
             Updated {dataFormated}
           </li>
-          {!!issues?.totalCount && (
+          {!!issues.totalCount && (
             <li className="repoElement__container__content_other__item">
-              {issues?.totalCount} issues need help
+              {issues.totalCount} issues need help
             </li>
           )}
         </div>
