@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NodeType } from "../../../types/SearchList";
+import { Repo } from "../../../types/SearchList";
 import parseDate from "../../../utils/helper/parseDate";
 import RepoIcon from "./../../../assets/svg/repo.svg";
 import StarIcon from "./../../../assets/svg/star.svg";
@@ -7,7 +7,7 @@ import StarIcon from "./../../../assets/svg/star.svg";
 import "./style.scss";
 
 type Props = {
-  items: NodeType;
+  items: Repo;
 };
 
 export const RepoElement = ({ items }: Props) => {
@@ -39,7 +39,7 @@ export const RepoElement = ({ items }: Props) => {
           </h3>
         </div>
 
-        <div className="repoElement__container__content_other">
+        <ol className="repoElement__container__content_other">
           <li className="repoElement__container__content_other__item">
             <StarIcon className="repoElement__container__content_other__item__icon" />
             {stargazerCount}
@@ -50,7 +50,7 @@ export const RepoElement = ({ items }: Props) => {
                 className="circle"
                 style={{ background: primaryLanguage?.color || "white" }}
               />
-              {primaryLanguage?.name}
+              {primaryLanguage.name}
             </li>
           )}
           {!!licenseInfo?.key && (
@@ -63,10 +63,10 @@ export const RepoElement = ({ items }: Props) => {
           </li>
           {!!issues?.totalCount && (
             <li className="repoElement__container__content_other__item">
-              {issues?.totalCount} issues need help
+              {issues.totalCount} issues need help
             </li>
           )}
-        </div>
+        </ol>
       </div>
     </div>
   );

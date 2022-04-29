@@ -1,11 +1,10 @@
-import Navbar from "../../components/Navbar";
 import StarIcon from "./../../assets/svg/star.svg";
 import PersonsIcon from "./../../assets/svg/person.svg";
 import { useParams } from "react-router-dom";
-import SEO from "../../components/SEO";
 import { useQuery } from "@apollo/client";
 import { SearchUser } from "../../graphql/operations/queries";
 import { SearchUserData, SearchUserVars } from "../../types/SearchUser";
+import { Navbar, SEO } from "../../components";
 
 import "./style.scss";
 

@@ -1,15 +1,19 @@
 import { useState } from "react";
-import { RepoElement, UserElement } from "../../components/Element";
-import Navbar from "../../components/Navbar";
-import Pagination from "../../components/Pagination";
-import SEO from "../../components/SEO";
-import { getData } from "../../services/getData";
+import {
+  Navbar,
+  Pagination,
+  RepoElement,
+  SEO,
+  UserElement,
+} from "../../components";
+
+import { getSearchedItems } from "../../services/getSearchedItems";
 
 import "./style.scss";
 
 export const Home = () => {
   const [activePage, setActivePage] = useState(0);
-  const { loading, count, items } = getData();
+  const { loading, count, items } = getSearchedItems();
 
   return (
     <section className="homePage">

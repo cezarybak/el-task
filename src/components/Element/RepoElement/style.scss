@@ -25,6 +25,7 @@
         margin: 0rem;
         font-weight: 500;
         @extend .text-style-16-link;
+        font-family: Roboto;
       }
 
       &__description {
@@ -40,6 +41,9 @@
       column-gap: 14px;
       list-style-type: none;
       flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
 
       &__item {
         display: flex;
