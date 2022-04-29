@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { RepoElement, UserElement } from "../../components/Element";
-import Navbar from "../../components/Navbar";
-import Pagination from "../../components/Pagination";
-import SEO from "../../components/SEO";
-import { getSearchedItems } from "../../services/getData";
+import {
+  Navbar,
+  Pagination,
+  RepoElement,
+  SEO,
+  UserElement,
+} from "../../components";
+
+import { getSearchedItems } from "../../services/getSearchedItems";
 
 import "./style.scss";
 

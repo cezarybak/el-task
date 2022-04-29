@@ -39,21 +39,21 @@ export const RepoElement = ({ items }: Props) => {
           </h3>
         </div>
 
-        <div className="repoElement__container__content_other">
+        <ol className="repoElement__container__content_other">
           <li className="repoElement__container__content_other__item">
             <StarIcon className="repoElement__container__content_other__item__icon" />
             {stargazerCount}
           </li>
-          {!!primaryLanguage.name && (
+          {!!primaryLanguage?.name && (
             <li className="repoElement__container__content_other__item">
               <div
                 className="circle"
-                style={{ background: primaryLanguage.color || "white" }}
+                style={{ background: primaryLanguage?.color || "white" }}
               />
               {primaryLanguage.name}
             </li>
           )}
-          {!!licenseInfo.key && (
+          {!!licenseInfo?.key && (
             <li className="repoElement__container__content_other__item">
               {licenseInfo?.key.toUpperCase()} license
             </li>
@@ -61,12 +61,12 @@ export const RepoElement = ({ items }: Props) => {
           <li className="repoElement__container__content_other__item">
             Updated {dataFormated}
           </li>
-          {!!issues.totalCount && (
+          {!!issues?.totalCount && (
             <li className="repoElement__container__content_other__item">
               {issues.totalCount} issues need help
             </li>
           )}
-        </div>
+        </ol>
       </div>
     </div>
   );

@@ -20,8 +20,8 @@ export const UserElement = ({ items }: Props) => {
         height={20}
       />
 
-      <div className="userElement__content">
-        <div className="userElement__content__name_wraper">
+      <ol className="userElement__content">
+        <li className="userElement__content__name_wraper">
           <Link
             className="userElement__content__name_wraper__navigation"
             to={`/user/${login}`}
@@ -29,8 +29,8 @@ export const UserElement = ({ items }: Props) => {
             {name || login}
           </Link>
           <h3 className="userElement__content__name_wraper__login">{login}</h3>
-        </div>
-        <div className="userElement__content__other_wraper">
+        </li>
+        <li className="userElement__content__other_wraper">
           {!!bio && (
             <h3 className="userElement__content__other_wraper__bio">{bio}</h3>
           )}
@@ -39,8 +39,8 @@ export const UserElement = ({ items }: Props) => {
               {location}
             </span>
           )}
-        </div>
-      </div>
+        </li>
+      </ol>
     </div>
   );
 };

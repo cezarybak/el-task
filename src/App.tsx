@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import User from "./pages/User";
-import Home from "./pages/Home";
+import { Home, User } from "./pages";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./graphql/apollo-client";
 import SearchDataProvider from "./utils/context/SearchProvider";

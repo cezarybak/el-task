@@ -16,6 +16,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
 
     &__name_wraper {
       &__navigation {
